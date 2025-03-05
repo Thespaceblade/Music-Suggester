@@ -15,7 +15,7 @@ This project uses **Tkinter** for the user interface and **Pandas** to process t
 
 ##  Installation
 
-### ** Clone the repository**
+### **Clone the repository**
 ```sh
 git clone https://github.com/YOUR_GITHUB_USERNAME/Music-Recommendation-System.git
 cd Music-Recommendation-System
