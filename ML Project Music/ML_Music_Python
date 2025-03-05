@@ -36,7 +36,7 @@ def recommend_song():
     if filtered_songs.empty:
         messagebox.showinfo("Recommendation", "I'm Sorry, I couldn't find any songs for your sentiment")
     else:
-        song = filtered_songs.sample(1).iloc[0]     # Randomly select a song from the filtered songs
+        song = filtered_songs.sample(n=1, random_state=None).iloc[0]     # Randomly select a song from the filtered songs
         messagebox.showinfo("Recommendation", f"Based on your sentiment, I would recommend the song '{song['Song_Name']}' by {song['Artist']}")
     
 #GUI Setup
