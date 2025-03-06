@@ -1,10 +1,11 @@
-# Music Suggester
 
-📌 Project Overview
+#Music Suggester
+
+Project Overview
 
 Music Suggester is a sentiment-based music recommendation system that suggests songs based on a user’s mood. It analyzes text input, detects the emotional tone, and fetches relevant songs from a dataset or Spotify’s API.
 
-🚀 Features
+Features
 
 Sentiment Analysis: Detects emotions from user input (Happy, Sad, Relaxed, Motivated).
 Song Recommendation: Matches moods with appropriate songs.
@@ -65,8 +66,4 @@ Push to GitHub:
 git push origin feature-branch
 Open a Pull Request.
 📜 License
-
-This project is licensed under the MIT License. Feel free to modify and improve it!
-
-🎶 Happy Coding & Keep Jamming! 🎧
 
