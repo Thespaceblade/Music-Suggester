@@ -1,5 +1,7 @@
 import spotipy 
 from spotipy.oauth2 import SpotifyClientCredentials
+import pandas as pd
+
 #Spotify API Credentials.. (need to hide?)
 CLIENT_ID = "512f10752545483b84a1165e6f2043af"
 CLIENT_SECRET = "d1ffad63279146bf812612ed2d06d58c"
@@ -12,8 +14,20 @@ def get_songs_by_mood(mood, limit=20):
     """Fetches songs from Spotify based on some mood-related keywords"""
     results = sp.search(q=f'{mood} songs', type="track", limit=limit)
     song_list = []
-    for track in results["tracks"]["items":]
+    for track in results["tracks"]["items"]:
         song_name = track["name"]
         artist = track["artists"][0]["name"]
         song_list.append({"Song_Name": song_name, "Artist": artist, "Sentiment_Label":mood})
     return song_list
+
+#Fetch different songs for each mood and store in a DataFrame
+moods = ["Happy", "Sad", "Relaxed", "Motivated"]
+all_songs = []
+for mood in moods:
+    songs = get_songs_by_mood(mood, limit=50)
+    all_songs.extend(songs)
+
+df = pd.DataFrame(all_songs)
+
+df.to_csv("music_data.csv", index=False)
+print(f"Data saved with {len(df)} songs")
