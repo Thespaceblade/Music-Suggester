@@ -1,11 +1,10 @@
 import spotipy 
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
-import os
 
 #Spotify API Credentials.. (need to hide?)
-CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID") #Apparently stores my spotify client ID on my computer itself so its not exposed
-CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET") #Requires me to set up a virtual environment and store credentials there
+CLIENT_ID = "512f10752545483b84a1165e6f2043af"
+CLIENT_SECRET = "d1ffad63279146bf812612ed2d06d58c"
 
 #Authenticate with Sptoify API
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET))
