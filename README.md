@@ -24,46 +24,25 @@ source .venv/bin/activate  # MacOS/Linux
 pip install -r requirements.txt
 4️⃣ Set Up Spotify API Credentials
 Create a .env file in the root folder and add:
-
 SPOTIPY_CLIENT_ID='your_client_id'
 SPOTIPY_CLIENT_SECRET='your_client_secret'
 ⚠️ Never expose your API credentials in public repositories! Use .gitignore to exclude the .env file.
 5️⃣ Run the Application
 python Music_Suggester.py
-🎨 How It Works
 
+🎨 How It Works
 User Input: Enter a phrase describing your mood.
 Sentiment Analysis: The script classifies the mood.
 Song Matching:
 If a local dataset is used, it finds a song that matches the sentiment.
 If Spotify API is enabled, it fetches new songs dynamically.
 Recommendation: The selected song is displayed.
-🏗️ Project Structure
 
-Music-Suggester/
-│── .venv/                   # Virtual environment (optional)
-│── .gitignore               # Ignore sensitive files
-│── requirements.txt         # Dependencies
-│── Music_Suggester.py       # Main script
-│── SP_API_song_puller.py    # Spotify API integration
-│── music_data.csv           # Local dataset (if used)
-│── README.md                # This file
-🛠️ Tech Stack
 
 Python 🐍
 Spotipy (Spotify API) 🎵
 Tkinter (GUI) 🖥️
 pandas (Data Handling) 📊
 dotenv (Environment Variables) 🔐
-🚀 Contributing
 
-Fork the repo.
-Create a new branch (feature-branch):
-git checkout -b feature-branch
-Commit changes:
-git commit -m "Added new feature"
-Push to GitHub:
-git push origin feature-branch
-Open a Pull Request.
-📜 License
 
