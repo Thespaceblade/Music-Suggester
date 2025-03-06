@@ -1,5 +1,5 @@
 
-#Music Suggester
+#Music Suggester#
 
 Project Overview
 
