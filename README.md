@@ -39,10 +39,10 @@ If Spotify API is enabled, it fetches new songs dynamically.
 Recommendation: The selected song is displayed.
 
 
-Python 🐍
-Spotipy (Spotify API) 🎵
-Tkinter (GUI) 🖥️
-pandas (Data Handling) 📊
-dotenv (Environment Variables) 🔐
+Python, 
+Spotipy (Spotify API), 
+Tkinter (GUI),  
+pandas (Data Handling), 
+dotenv (Environment Variables)
 
 
