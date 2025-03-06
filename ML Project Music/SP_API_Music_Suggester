@@ -1,0 +1,19 @@
+import spotipy 
+from spotipy.oauth2 import SpotifyClientCredentials
+#Spotify API Credentials.. (need to hide?)
+CLIENT_ID = "512f10752545483b84a1165e6f2043af"
+CLIENT_SECRET = "d1ffad63279146bf812612ed2d06d58c"
+
+#Authenticate with Sptoify API
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET))
+
+#function to retreive songs
+def get_songs_by_mood(mood, limit=20):
+    """Fetches songs from Spotify based on some mood-related keywords"""
+    results = sp.search(q=f'{mood} songs', type="track", limit=limit)
+    song_list = []
+    for track in results["tracks"]["items":]
+        song_name = track["name"]
+        artist = track["artists"][0]["name"]
+        song_list.append({"Song_Name": song_name, "Artist": artist, "Sentiment_Label":mood})
+    return song_list
