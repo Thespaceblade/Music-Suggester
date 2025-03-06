@@ -1,10 +1,15 @@
+import os
+from dotenv import load_dotenv  # Import load_dotenv to read .env file
 import spotipy 
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 
+#load environment variables from .env file
+load_dotenv()
+
 #Spotify API Credentials.. (need to hide?)
-CLIENT_ID = "512f10752545483b84a1165e6f2043af"
-CLIENT_SECRET = "d1ffad63279146bf812612ed2d06d58c"
+CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
 
 #Authenticate with Sptoify API
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET))
